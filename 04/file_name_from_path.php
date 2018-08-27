@@ -13,6 +13,10 @@
         $pathName = './test/path/name/pathinfo.txt'; // 存在しないファイル/パス
         echo "<p>パス名: $pathName</p>";
         
+        if(!file_exists($pathName)){
+            die('ファイルが存在しません。');
+        }
+        
         // pathinfo()関数でファイル名を取得、表示します。
         $pathinfo = pathinfo($pathName);
         echo '<p>pathinfo()関数でファイル名を取得する<br>';

@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php
-        // ファイル名を設定します。
+                // ファイル名を設定します。
         $fileName = '../data/fgets.txt';
         
         // ファイルの存在を確認します。
@@ -31,7 +31,7 @@
         
         // ファイルのロックを解除します。
         fflush($fp);
-        flock($fp, LOCK_SH);
+        flock($fp, LOCK_UN);
         
         //  ファイルを閉じます。
         fclose($fp);

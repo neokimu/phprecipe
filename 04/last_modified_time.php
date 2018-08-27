@@ -9,6 +9,11 @@
         // 最終更新時刻をチェックするファイルにこのサンプルファイルを設定します。
         $fileName = basename(__FILE__);
         
+        // ファイルの有無確認
+        if (! is_file($fileName)) {
+            die('ファイルが存在しません。');
+        }
+        
         // ファイルの最終更新時刻を取得して、ブラウザに出力します。
         echo $fileName . ' の最終更新時刻: ';
         echo date('Y-m-d H:i:s', filemtime($fileName));

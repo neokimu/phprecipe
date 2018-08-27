@@ -24,8 +24,8 @@
         // たい日付のタイムスタンプを指定します。省略した場合は現在の日時で計算を行ない
         // ます。
         
-        function getFiscalYear($starMonth, $timestamp = FALSE) {
-            if ($starMonth < 1 || $starMonth > 12) {
+        function getFiscalYear($startMonth, $timestamp = FALSE) {
+            if ($startMonth < 1 || $startMonth > 12) {
                 return FALSE;
             }
             
@@ -38,7 +38,7 @@
             
             // 年度を計算する
             $year = $date['year'];
-            $month = $date['mon'] - ($starMonth - 1);
+            $month = $date['mon'] - ($startMonth - 1);
             $result = getdate(mktime(0, 0, 0, $month, 1, $year));
             
             return $result['year'];

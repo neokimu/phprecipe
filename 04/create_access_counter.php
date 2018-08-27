@@ -4,7 +4,7 @@
 // このファイルに直接アクセスした場合は「0」として記録
 $pageID = !isset($pageID) ? 0: $pageID;
 
-// 許可するページIDだけをかうんとします。
+// 許可するページIDだけをカウントします。
 // 許可するページIDの配列(直接アクセスを拒否する場合、配列から「0」を削除)
 $countPages = array(0, '1', '2', 'top', 'home');
 // in_array()関数の第3引数にtrueを設定し型もチェック
@@ -30,8 +30,11 @@ if (!is_resource($fp)){
 flock($fp, LOCK_EX);
 
 // カウンタ値を取得し、1加算します。
-$count = fgets($fp);
+$count = (int)fgets($fp);
+
+if(is_int($count)){
 $count = $count + 1;
+}
 
 // ファイルの中身をクリアします。
 ftruncate($fp, 0);

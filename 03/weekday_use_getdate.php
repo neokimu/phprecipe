@@ -7,7 +7,7 @@
     <body>
         <?php
         // 2013年10月1日のタイムスタンプ
-        $timestamp = mktime(0, 0, 0, 10, 1, 2013);
+        $timestamp = mktime(0, 0, 0, 10+1, 0, 2013);
         $date = getdate($timestamp);
         /* dateの値の確認
         foreach ($date as $value) {
