@@ -6,18 +6,22 @@
     </head>
     <body>
         <?php
-        $data = array('terurou', '八木照朗', '25');
+        $data[] = ['1', '1', '25'];
+        $data[] = ['2', '2', '25'];
+        $data[] = ['3', '3', '25'];
         
         echo '<p>元の配列: ';
         print_r($data);
         echo '</p>';
         
         // $id, $name, $ageにそれぞれ値をセットします。
-        list($id, $name, $age) = $data;
-        
-        echo '<p>ID($id): ' . $id . '</p>';
-        echo '<p>名前($name): ' . $name . '</p>';
-        echo '<p>年齢($age): ' . $age . '</p>';
+        foreach ($data as $value) {
+            list($id, $name, $age) = $value;
+            
+            echo '<p>ID($id): ' . $id . '</p>';
+            echo '<p>名前($name): ' . $name . '</p>';
+            echo '<p>年齢($age): ' . $age . '</p>';
+            }
         ?>
     </body>
 </html>

@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php
+        require_once '../lib/h.php';
         // 処理対象の配列を用意します。
         $nature = array('water', 'forest', 'tree', 'cloud', 'sun', 'river');
         
@@ -41,9 +42,6 @@
         }
         echo '</ul>';
         
-        function h($string) { // HTMLでのエスケープ処理をする関数
-            return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
-        }
         ?>
     </body>
 </html>
