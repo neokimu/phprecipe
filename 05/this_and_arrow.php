@@ -11,7 +11,7 @@
         // プロパティを初期化します。
           public $var1 = 1;
           public $var2 = 2;
-
+     
             function show()
             {
           // show()メソッド内のローカル変数$var1です。
