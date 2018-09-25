@@ -1,8 +1,8 @@
 <?php
 // データベース設定
 $dbServer = '127.0.0.1';
-$dbUser   = 'user';
-$dbPass   = 'password';
+$dbUser   = 'root';
+$dbPass   = 'root';
 $dbName   = 'sample';
 
 # MySQL用のDSN文字列です。
